@@ -1,3 +1,4 @@
+// ignore_for_file: deprecated_member_use, prefer_const_constructors, use_key_in_widget_constructors
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -5,13 +6,41 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        color: Colors.white,
         width: double.infinity,
-        color: const Color(0xff183561),
-        child: Column(children: <Widget>[
-          Image.asset('assets/img/img_main.png'),
-          Text('SimpleApp'),
-          Text('Jesus Barros')
-        ]),
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              Image.asset('assets/imgs/splash.png'),
+              Column(
+                children: <Widget>[
+                  Text(
+                    'SimpleApp',
+                    style: Theme.of(context).textTheme.headline1,
+                  ),
+                  Text(
+                    'Jesus Barros',
+                    style: Theme.of(context).textTheme.headline2,
+                  ),
+                ],
+              ),
+              MaterialButton(
+                elevation: 10.0,
+                minWidth: 170.0,
+                height: 50.0,
+                color: Theme.of(context).primaryColor,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8.0)),
+                child: Text(
+                  'Get Started',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20.0,
+                  ),
+                ),
+                onPressed: () {},
+              ),
+            ]),
       ),
     );
   }
