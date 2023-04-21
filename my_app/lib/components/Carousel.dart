@@ -1,12 +1,14 @@
+// ignore_for_file: must_be_immutable, use_key_in_widget_constructors, unnecessary_this
+
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import './item_job.dart';
-import '../models/job.dart';
+import 'ItemBanner.dart';
+import '../models/Weather.dart';
 
 class Carousel extends StatelessWidget {
-  List<Job> jobs;
+  List<Weather> weathers;
 
-  JobCarousel(this.jobs);
+  Carousel(this.weathers);
 
   @override
   Widget build(BuildContext context) {
@@ -14,11 +16,10 @@ class Carousel extends StatelessWidget {
       options: CarouselOptions(
         enableInfiniteScroll: false,
         reverse: false,
-        viewportFraction: 0.86,
-        height: 230.0,
+        viewportFraction: 0.90,
+        height: 200.0,
       ),
-      items: this.jobs.map((e) => ItemJob(e, themeDark: jobs.indexOf(e) == 0)).toList(),
+      items: this.weathers.map((e) => ItemBanner(e)).toList(),
     );
   }
-
 }

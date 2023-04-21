@@ -1,9 +1,17 @@
-// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, prefer_const_literals_to_create_immutables, deprecated_member_use
+// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, prefer_const_literals_to_create_immutables, deprecated_member_use, must_be_immutable
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../components/Carousel.dart';
+import '../models/Weather.dart';
 
 class HomeScreen extends StatelessWidget {
+  List<Weather> forYouJobs = [
+    Weather(degrees: '26', sky: 'Clear Sky', dayNight: false),
+    Weather(degrees: '26', sky: 'Clear Sky', dayNight: false),
+    Weather(degrees: '26', sky: 'Clear Sky', dayNight: false),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,6 +20,7 @@ class HomeScreen extends StatelessWidget {
           children: <Widget>[
             _customAppBar(),
             _textHeader(context),
+            Carousel(forYouJobs),
           ],
         ),
       ),
@@ -20,7 +29,7 @@ class HomeScreen extends StatelessWidget {
 
   Widget _customAppBar() {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 0.0, vertical: 5.0),
+      padding: EdgeInsets.symmetric(horizontal: 0.0, vertical: 0.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
