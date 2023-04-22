@@ -30,6 +30,7 @@ class HomeScreen extends StatelessWidget {
             _textHeader(context),
             Carousel(forWeather),
             _bedroom(context, forBedroom),
+            _bad(context, forBedroom)
           ],
         ),
       ),
@@ -99,10 +100,17 @@ class HomeScreen extends StatelessWidget {
             icon: SvgPicture.asset('assets/icons/slider.svg'),
             onPressed: () {},
           ),
-          IconButton(
-            iconSize: 40.0,
-            icon: SvgPicture.asset('assets/icons/image.svg'),
-            onPressed: () {},
+          Container(
+            margin: EdgeInsets.only(right: 16),
+            child: Expanded(
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(5),
+                child: Image(
+                  image: AssetImage('assets/imgs/profile.png'),
+                  height: 40,
+                ),
+              ),
+            ),
           ),
         ],
       ),
@@ -141,6 +149,32 @@ Widget _bedroom(context, forBedroom) {
         ),
       ),
       BedroomCarousel(forBedroom),
+    ],
+  );
+}
+
+Widget _bad(context, forBedroom) {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: <Widget>[
+      Padding(
+        padding: const EdgeInsets.only(left: 18.0, top: 8.0, bottom: 20),
+        child: Text(
+          'Bad Bunny',
+          style: Theme.of(context).textTheme.bodyText1,
+        ),
+      ),
+      Container(
+        margin: EdgeInsets.only(left: 16, right: 16, bottom: 16),
+        child: Expanded(
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(16),
+            child: Image(
+              image: AssetImage('assets/imgs/bad_bunny.jpg'),
+            ),
+          ),
+        ),
+      ),
     ],
   );
 }
