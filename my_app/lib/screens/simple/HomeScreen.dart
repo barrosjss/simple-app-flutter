@@ -2,10 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../components/BannerCarousel/Carousel.dart';
-import '../components/BedroomCarousel/BedroomCarousel.dart';
-import '../models/Weather.dart';
-import '../models/Bedroom.dart';
+import '../../components/BannerCarousel/Carousel.dart';
+import '../../components/BedroomCarousel/BedroomCarousel.dart';
+import '../../models/Weather.dart';
+import '../../models/Bedroom.dart';
 
 class HomeScreen extends StatelessWidget {
   List<Weather> forWeather = [

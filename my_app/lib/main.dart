@@ -1,11 +1,26 @@
 // ignore_for_file: deprecated_member_use, prefer_const_constructors, use_key_in_widget_constructors
 import 'package:flutter/material.dart';
-import 'package:my_app/screens/BarberShop.dart';
+//import 'package:my_app/screens/BarberShop.dart';
+import 'package:my_app/screens/adidas/ZapatoPage.dart';
 
 void main() {
   runApp(MyApp());
 }
 
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'ShoesApp',
+        home: ZapatoPage());
+  }
+}
+
+
+/*
+// BarberShop Main
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
@@ -58,3 +73,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+*/
