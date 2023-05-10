@@ -13,7 +13,18 @@ class ZapatoPage extends StatelessWidget {
         elevation: 0,
         title: _customAppBar(),
       ),
-      body: Text('Hair cut'),
+      body: Container(
+        padding: EdgeInsets.symmetric(horizontal: 15),
+        child: Column(children: [
+          Container(
+            decoration: BoxDecoration(
+              color: tdBGColor,
+              borderRadius: BorderRadius.circular(6),
+            ),
+            child: TextField(),
+          )
+        ]),
+      ),
     );
   }
 
