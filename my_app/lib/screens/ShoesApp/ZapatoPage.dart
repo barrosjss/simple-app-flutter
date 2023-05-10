@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, empty_statements, prefer_const_literals_to_create_immutables, unused_element
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import '../../constants/ShoesApp/colors.dart';
 
 class ZapatoPage extends StatelessWidget {
@@ -8,6 +9,7 @@ class ZapatoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: tdGray,
       appBar: AppBar(
         backgroundColor: tdGray,
         elevation: 0,
@@ -17,6 +19,7 @@ class ZapatoPage extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 15),
         child: Column(children: [
           _search(),
+          _brands(),
         ]),
       ),
     );
@@ -24,12 +27,30 @@ class ZapatoPage extends StatelessWidget {
 
   Widget _customAppBar() {
     return Row(
-      children: [],
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: <Widget>[
+        IconButton(
+          iconSize: 40.0,
+          icon: SvgPicture.asset('assets/icons/shoesapp/hamburger.svg'),
+          onPressed: () {},
+        ),
+        Text(
+          'Explore',
+          style: TextStyle(
+              fontSize: 21, color: tdBlack, fontWeight: FontWeight.bold),
+        ),
+        IconButton(
+          iconSize: 40.0,
+          icon: SvgPicture.asset('assets/icons/shoesapp/cart.svg'),
+          onPressed: () {},
+        ),
+      ],
     );
   }
 
   Widget _search() {
     return Container(
+      margin: EdgeInsets.only(top: 10),
       padding: EdgeInsets.symmetric(horizontal: 14),
       decoration: BoxDecoration(
         color: tdBGColor,
@@ -56,6 +77,37 @@ class ZapatoPage extends StatelessWidget {
           hintText: 'Search...',
           hintStyle: TextStyle(color: tdGrayText),
         ),
+      ),
+    );
+  }
+
+  Widget _brands() {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 5, vertical: 30),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Image.asset(
+            'assets/imgs/shoesapp/nike.png',
+            width: 57,
+            height: 30,
+          ),
+          Image.asset(
+            'assets/imgs/shoesapp/adidas.png',
+            width: 57,
+            height: 30,
+          ),
+          Image.asset(
+            'assets/imgs/shoesapp/puma.png',
+            width: 57,
+            height: 30,
+          ),
+          Image.asset(
+            'assets/imgs/shoesapp/asics.png',
+            width: 57,
+            height: 30,
+          ),
+        ],
       ),
     );
   }
