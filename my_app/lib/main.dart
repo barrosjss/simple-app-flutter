@@ -1,7 +1,7 @@
 // ignore_for_file: deprecated_member_use, prefer_const_constructors, use_key_in_widget_constructors
 import 'package:flutter/material.dart';
 //import 'package:my_app/screens/BarberShop.dart';
-import 'package:my_app/screens/adidas/ZapatoPage.dart';
+import 'package:my_app/screens/ShoesApp/ZapatoPage.dart';
 
 void main() {
   runApp(MyApp());
