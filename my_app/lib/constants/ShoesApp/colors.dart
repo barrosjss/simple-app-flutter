@@ -6,4 +6,4 @@ const Color tdBlack = Color(0xFF000000);
 const Color tdBlue = Color(0xFF2C7FE0);
 const Color tdYellow = Color(0xFFFFE600);
 const Color tdLigthGray = Color(0xFFEBEBEB);
-
+const Color tdGrayText = Color(0xFF8A8A9D);
