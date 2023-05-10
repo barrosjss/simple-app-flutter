@@ -66,13 +66,8 @@ class ZapatoPage extends StatelessWidget {
       ),
       child: TextField(
         decoration: InputDecoration(
-          contentPadding: EdgeInsets.all(0),
-          prefixIcon: Icon(
-            Icons.search,
-            color: tdBlack,
-            size: 20,
-          ),
-          prefixIconConstraints: BoxConstraints(maxHeight: 20, maxWidth: 25),
+          prefixIcon: SvgPicture.asset('assets/icons/shoesapp/search.svg'),
+          prefixIconConstraints: BoxConstraints(maxHeight: 47, maxWidth: 25),
           border: InputBorder.none,
           hintText: 'Search...',
           hintStyle: TextStyle(color: tdGrayText),
